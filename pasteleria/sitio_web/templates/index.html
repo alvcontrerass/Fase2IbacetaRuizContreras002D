@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    {% load static %}
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Prueba 1 Desarrollo Web - Pasteleria" />
+    <meta name="author" content="Sonia, Maribel y Alvaro" />
+    <title>Pasteleria Momentos Dulces</title>
+    <!-- Icono Pestaña-->
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/cake.ico' %}" /> <!--CARGANDO ICONO FORMATO DJANGO-->
+    <!-- Icono Bloque Servicio-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Fuentes Google-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <!--Galeria de fotos, fotos grandes-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+    <!-- CSS -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" /> <!-- CARGANDO CSS EN FORMATO DJANGO-->
+</head>
+
+<body id="page-top">
+    <!-- Menu de navegacion -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><i class="fas fa-birthday-cake fa-2x mb-3"> </i> </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'index' %}">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'catalogo' %}">Catálogo</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'contacto' %}">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Inicio Principal -->
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center justify-content-center text-center">
+                <div class="col-lg-10 align-self-end">
+                    <h1 class="text-uppercase text-white font-weight-bold">Momentos Dulces</h1>
+                    <hr class="divider my-4" />
+                </div>
+                <div class="col-lg-8 align-self-baseline">
+                    <p class="text-white-75 font-weight-light mb-5">Encuentra acá los mejores pasteles de Chile!</p>
+                    <a class="btn btn-primary btn-xl js-scroll-trigger" href="{% url 'catalogo' %}">Ver Nuestro Catálogo</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre nosotros -->
+    <section class="page-section bg-primary" id="about">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="text-white mt-0">¿Quienes somos?</h2>
+                    <hr class="divider light my-4" />
+                    <p class="text-white-50 mb-4">Pasteleria tradicional historica, generacion en generacion buscando entregar el mejor servicio para ti y tu familia. Somos lideres en entregar sonrisas y cariño para tus seres queridos. Conocidos por nuestras exquisita pasteleria e inigualable bolleria </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pasteles Estrellas -->
+    <div id="portafolio">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/1.jpg' %}">
+                        <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/1.jpg' %}" alt="" />
+                        <div class="portafolio-box-caption">
+                            <div class="pasteleria-category text-white-50">Torta Cobertura Chocolate</div>
+                            <div class="pasteleria-name">Torta de bizcocho con crema pastelera y frutos rojos</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/2.jpg' %}">
+                        <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/2.jpg' %}" alt="" />
+                        <div class="portafolio-box-caption">
+                            <div class="pasteleria-category text-white-50">Pie de Limón</div>
+                            <div class="pasteleria-name">Tarta formada por una base de masa quebrada u hojaldre rellena con crema de limón. </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/3.png' %}">
+                        <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/3.png' %}" alt=""/>
+                        <div class="portafolio-box-caption">
+                            <div class="pasteleria-category text-white-50">Torta Trufa Chocolate</div>
+                            <div class="pasteleria-name">Torta de bizcocho con salsa de trufa y chocolate</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/4.jpg' %}">
+                        <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/4.jpg' %}" alt="" />
+                        <div class="portafolio-box-caption">
+                            <div class="pasteleria-category text-white-50">Tartaleta de Frutas</div>
+                            <div class="pasteleria-name">Tarta formada por una base de galletas y crema pastelera. Decorada con frutas de la temporada</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/5.jpg' %}">
+                        <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/5.jpg' %}" alt="" />
+                        <div class="portafolio-box-caption">
+                            <div class="pasteleria-category text-white-50">Torta de Cuchuflies</div>
+                            <div class="pasteleria-name">Torta enrollada en cuchuflies de chocolate, relleno con diversos dulces a eleccion</div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/6.jpg' %}">
+                        <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/6.jpg' %}" alt="" />
+                        <div class="portafolio-box-caption p-3">
+                            <div class="pasteleria-category text-white-50">Torta "Reina Sofia"</div>
+                            <div class="pasteleria-name">Torta en masa de repollito, crema chantilly, crema de vainilla y mermelada de frambuesa</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Staff -->
+    <div class="container">
+        <h1 style="text-align:center;">Nuestro Staff</h1>
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'assets/img/staff/2_1.jpg' %}">
+                <h2>Leticia Martinez</h2>
+                <h5>Chef Lider</h5>
+                <p>Chef con basta experiencia en pastelerias y resposteria</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'assets/img/staff/3_1.jpg' %}">
+                <h2>Diego Toro</h2>
+                <h5>Panaderia y bizcocheria</h5>
+                <p>Chef encargado de darle vida a nuestras masas</p>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'assets/img/staff/1_1.jpg' %}">
+                <h2>Paola Guerrero</h2>
+                <h5>Decoradora</h5>
+                <p>Encargada de entregar una excelente presentacion</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Servicios -->
+    <section class="page-section" id="services">
+        <div class="container">
+            <h2 class="text-center mt-0">Nuestros Servicios</h2>
+            <hr class="divider my-4" />
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-thumbs-up text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Calidad</h3>
+                        <p class="text-muted mb-0">Junto a nuestro staff de primera, trabajamos con altos estandares de calidad</p>
+                        <p style="color:#E61283">¡Si no te gusta el resultado, te devolvemos el dinero!</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-birthday-cake text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Eventos Especiales</h3>
+                        <p class="text-muted mb-0">Vuelve unico tus eventos particulares junto a nuestros variados servicios especiales</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-truck text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Delivery</h3>
+                        <p class="text-muted mb-0">Llegamos a todos los lugares de la region metropolitana</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <i class="fas fa-4x fa-heart text-primary mb-4"></i>
+                        <h3 class="h4 mb-2">Hechos con amor</h3>
+                        <p class="text-muted mb-0">Todos nuestros productos provienen de recetas de la casa, tradicion familiar de generacion en generacion</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="page-section" id="contact">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mt-0">Escríbenos</h2>
+                    <hr class="divider my-4" />
+                    <p class="text-muted mb-5">Puedes contactarnos mediante correo electrónico, por nuestro WhatsApp y a traves de nuestra web!</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                    <i class="fab fa-whatsapp fa-3x mb-3 text-muted"></i>
+                    <div>
+                        <a href="tel://+56912345678">+56 9 1234 5678</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="far fa-envelope fa-3x mb-3 text-muted"></i>
+                    <a class="d-block" href="mailto:contacto@pasteleria.cl">contacto@pasteleria.cl</a>
+                </div>
+                <div class="col-lg-4 mr-auto text-center">
+                    <i class="fab fa-wpforms fa-3x mb-3 text-muted"></i>
+                    <a class="d-block" href="{% url 'contacto' %}"> ¡Haz click aqui para ingresar tu pedido mediante la web!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="bg-light py-5">
+        <div class="container">
+            <div class="small text-center text-muted">Copyright © 2020 - DWY4101-002D DuocUC</div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+    <!-- plugins JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <!-- JS -->
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+
+</html>

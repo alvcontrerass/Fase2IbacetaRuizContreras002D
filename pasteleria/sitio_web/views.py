@@ -3,7 +3,10 @@ from django.http import HttpResponse
 
 # Create your views here.
 def inicio(request):
-    return HttpResponse('inicio')
+    return render(
+        request,
+        'index.html'
+    )
 
 def catalogo(request):
     return HttpResponse('catalogo')
