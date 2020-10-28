@@ -9,7 +9,13 @@ def inicio(request):
     )
 
 def catalogo(request):
-    return HttpResponse('catalogo')
+    return render(
+        request,
+        'productos.html'
+    )
 
 def contacto(request):
-    return HttpResponse('contacto')
+    return render (
+        request,
+        'formulario.html'
+    )
