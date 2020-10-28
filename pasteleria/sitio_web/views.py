@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def inicio(request):
-    return HttpResponse('maldita shit')
+    return HttpResponse('inicio')
 
 def catalogo(request):
     return HttpResponse('catalogo')
