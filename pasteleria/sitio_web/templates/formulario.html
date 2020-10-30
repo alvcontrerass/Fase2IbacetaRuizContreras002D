@@ -65,7 +65,8 @@
     <section class="page-section">
         <div class="container font_form">
             <h1>Formulario de Contacto</h1>
-            <form id="formulario" action="#">
+            
+            <form id="formulario" action="/enviar_formulario/" method="POST">{% csrf_token %} 
                 <div class="form-group">
                     <label> Nombre </label>
                     <input class="form-control" name="nombre" type="name" placeholder="Ingrese nombre">
