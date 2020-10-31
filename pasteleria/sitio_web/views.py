@@ -2,9 +2,11 @@ from django.shortcuts import render
 from django.http import HttpResponse 
 from django.core.mail import send_mail
 from django.conf import settings
+from . models import Pedido_cabecera, Pedido_posicion, Producto
+from django.views import generic 
 
 # Create your views here.
-def inicio(request):
+def index(request):
     return render(
         request,
         'index.html'
