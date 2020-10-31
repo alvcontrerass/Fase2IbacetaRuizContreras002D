@@ -1,5 +1,6 @@
 from django.test import TestCase
 from . models import Producto, Pedido_posicion
+#comentario arreglo nombre git
 
 class PastelesTestCase(TestCase):
     def setup(self):
