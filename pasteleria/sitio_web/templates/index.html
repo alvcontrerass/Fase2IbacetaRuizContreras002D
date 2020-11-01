@@ -1,5 +1,6 @@
 {% extends "base_generic.html" %}
 
+{% block content %}
     <!-- Inicio Principal -->
     <header class="masthead">
         <div class="container h-100">
@@ -67,10 +68,10 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
+                    {% load static %}
                     <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/4.jpg' %}">
                         {% load static %}
                         <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/4.jpg' %}" alt="" />
-                        {% load static %}
                         <div class="portafolio-box-caption">
                             <div class="pasteleria-category text-white-50">Tartaleta de Frutas</div>
                             <div class="pasteleria-name">Tarta formada por una base de galletas y crema pastelera. Decorada con frutas de la temporada</div>
@@ -168,4 +169,6 @@
                 </div>
             </div>
         </div>
+        
+    {% endblock %}
     </section>

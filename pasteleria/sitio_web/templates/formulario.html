@@ -1,16 +1,14 @@
-{extends "base_generic.html" %}
+{% extends "base_generic.html" %}
 
-<<<<<<< HEAD
 <head>
-
-    {% load static %}
-
+{% block content %}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="Prueba 1 Desarrollo Web - Pasteleria" />
     <meta name="author" content="Sonia, Maribel y Alvaro" />
     <title>Pasteleria Momentos Dulces</title>
     <!-- Icono pestaña -->
+    {% load static %}
     <link rel="icon" type="image/x-icon" href="{% static 'assets/img/cake.ico' %}" />
     <!-- iconos bloque servicios -->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
@@ -44,10 +42,6 @@
     </nav>
 
     <!-- Mapa de Ubicacion -->
-=======
-{% block content %}
-<!-- Mapa de Ubicacion -->
->>>>>>> 65dd49a5d1a051ea3a136e7953892fa5af9e6e59
     <section class="page-section bg-primary" id="location">
 
         {% if mostrar_popup == '1' %}    
