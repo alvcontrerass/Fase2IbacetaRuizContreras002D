@@ -56,6 +56,10 @@ def contacto(request):
             'formulario.html'
         )
 
+class ProductoListView(generic.ListView):
+    model = Producto
+    paginate_by = 30
+
 class ProductoCreate(CreateView):
     model = Producto
     fields = ['nombre_producto','descripcion','valor']
@@ -66,7 +70,7 @@ class ProductoUpdate(UpdateView):
 
 class ProductoDelete(DeleteView):
     model = Producto
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('productos')
 
 class ProductoDetailView(generic.DetailView):
     model=Producto
