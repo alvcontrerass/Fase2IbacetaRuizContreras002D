@@ -2,6 +2,7 @@
 
 from django.db import migrations, models
 import django.db.models.deletion
+import uuid
 
 
 class Migration(migrations.Migration):
@@ -16,7 +17,7 @@ class Migration(migrations.Migration):
             name='Pedido_cabecera',
             fields=[
                 ('numero_pedido', models.AutoField(primary_key=True, serialize=False)),
-                ('fecha_creacion', models.DateField()),
+                ('fecha_creacion', models.DateField(blank=True, null=True)),
                 ('hora_creacion', models.TimeField()),
                 ('fecha_entrega', models.DateField()),
                 ('hora_entrega', models.TimeField()),

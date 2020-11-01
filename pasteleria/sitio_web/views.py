@@ -3,13 +3,18 @@ from django.http import HttpResponse
 from django.core.mail import send_mail
 from django.views import generic
 from django.conf import settings
+<<<<<<< HEAD
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
 from sitio_web.models import Contacto, Producto
+=======
+from . models import Pedido_cabecera, Pedido_posicion, Producto
+from django.views import generic 
+>>>>>>> 65dd49a5d1a051ea3a136e7953892fa5af9e6e59
 
 # Create your views here.
-def inicio(request):
+def index(request):
     return render(
         request,
         'index.html'

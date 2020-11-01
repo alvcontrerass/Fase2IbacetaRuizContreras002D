@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
+{extends "base_generic.html" %}
 
+<<<<<<< HEAD
 <head>
 
     {% load static %}
@@ -44,6 +44,10 @@
     </nav>
 
     <!-- Mapa de Ubicacion -->
+=======
+{% block content %}
+<!-- Mapa de Ubicacion -->
+>>>>>>> 65dd49a5d1a051ea3a136e7953892fa5af9e6e59
     <section class="page-section bg-primary" id="location">
 
         {% if mostrar_popup == '1' %}    
@@ -133,52 +137,4 @@
         </div>
     </section>
 
-    
-
-
-    <!-- Contacto -->
-    <section class="page-section" id="contact">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Escríbenos</h2>
-                    <hr class="divider my-4" />
-                    <p class="text-muted mb-5">Tambien nos puedes encontrar por nuestro correo electrónico o nuestro WhatsApp!</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                    <i class="fab fa-whatsapp fa-3x mb-3 text-muted"></i>
-                    <div>
-                        <a href="tel://+56912345678">+56 9 1234 5678</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mr-auto text-center">
-                    <i class="far fa-envelope fa-3x mb-3 text-muted"></i>
-                    <a class="d-block" href="mailto:contacto@pasteleria.cl">contacto@pasteleria.cl</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer class="bg-light py-5">
-        <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - DWY4101-002D DuocUC </div>
-        </div>
-    </footer>
-
-
-
-    <!-- Bootstrap core JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <!-- plugins JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <!-- JS y Jquery -->
-    <script src="{% static 'js/scripts.js' %}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
-    <script src="{% static 'js/valida.js' %}"></script>
-
-</body></html>
+{% endblock %}

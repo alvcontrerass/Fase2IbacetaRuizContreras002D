@@ -1,43 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-
-    {% load static %}
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Prueba 1 Desarrollo Web - Pasteleria" />
-    <meta name="author" content="Sonia, Maribel y Alvaro" />
-    <title>Pasteleria Momentos Dulces</title>
-    <!-- Icono Pestaña-->
-    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/cake.ico' %}" /> <!--CARGANDO ICONO FORMATO DJANGO-->
-    <!-- Icono Bloque Servicio-->
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Fuentes Google-->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-    <!--Galeria de fotos, fotos grandes-->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-    <!-- CSS -->
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet" /> <!-- CARGANDO CSS EN FORMATO DJANGO-->
-</head>
-
-<body id="page-top">
-    <!-- Menu de navegacion -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"><i class="fas fa-birthday-cake fa-2x mb-3"> </i> </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'index' %}">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'catalogo' %}">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'contacto' %}">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+{% extends "base_generic.html" %}
 
     <!-- Inicio Principal -->
     <header class="masthead">
@@ -73,7 +34,9 @@
         <div class="container-fluid p-0">
             <div class="row no-gutters">
                 <div class="col-lg-4 col-sm-6">
+                    {% load static %}
                     <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/1.jpg' %}">
+                        {% load static %}
                         <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/1.jpg' %}" alt="" />
                         <div class="portafolio-box-caption">
                             <div class="pasteleria-category text-white-50">Torta Cobertura Chocolate</div>
@@ -82,7 +45,9 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
+                    {% load static %}
                     <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/2.jpg' %}">
+                        {% load static %}
                         <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/2.jpg' %}" alt="" />
                         <div class="portafolio-box-caption">
                             <div class="pasteleria-category text-white-50">Pie de Limón</div>
@@ -91,7 +56,9 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
+                    {% load static %}
                     <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/3.png' %}">
+                        {% load static %}
                         <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/3.png' %}" alt=""/>
                         <div class="portafolio-box-caption">
                             <div class="pasteleria-category text-white-50">Torta Trufa Chocolate</div>
@@ -101,7 +68,9 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/4.jpg' %}">
+                        {% load static %}
                         <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/4.jpg' %}" alt="" />
+                        {% load static %}
                         <div class="portafolio-box-caption">
                             <div class="pasteleria-category text-white-50">Tartaleta de Frutas</div>
                             <div class="pasteleria-name">Tarta formada por una base de galletas y crema pastelera. Decorada con frutas de la temporada</div>
@@ -109,7 +78,9 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
+                    {% load static %}
                     <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/5.jpg' %}">
+                        {% load static %}
                         <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/5.jpg' %}" alt="" />
                         <div class="portafolio-box-caption">
                             <div class="pasteleria-category text-white-50">Torta de Cuchuflies</div>
@@ -118,7 +89,9 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
+                    {% load static %}
                     <a class="portafolio-box" href="{% static 'assets/img/portafolio/fullsize/6.jpg' %}">
+                        {% load static %}
                         <img class="img-fluid" src="{% static 'assets/img/portafolio/thumbnails/6.jpg' %}" alt="" />
                         <div class="portafolio-box-caption p-3">
                             <div class="pasteleria-category text-white-50">Torta "Reina Sofia"</div>
@@ -135,18 +108,21 @@
         <h1 style="text-align:center;">Nuestro Staff</h1>
         <div class="row">
             <div class="col-lg-4 text-center">
+                {% load static %}
                 <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'assets/img/staff/2_1.jpg' %}">
                 <h2>Leticia Martinez</h2>
                 <h5>Chef Lider</h5>
                 <p>Chef con basta experiencia en pastelerias y resposteria</p>
             </div>
             <div class="col-lg-4 text-center">
+                {% load static %}
                 <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'assets/img/staff/3_1.jpg' %}">
                 <h2>Diego Toro</h2>
                 <h5>Panaderia y bizcocheria</h5>
                 <p>Chef encargado de darle vida a nuestras masas</p>
             </div>
             <div class="col-lg-4 text-center">
+                {% load static %}
                 <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{% static 'assets/img/staff/1_1.jpg' %}">
                 <h2>Paola Guerrero</h2>
                 <h5>Decoradora</h5>
@@ -194,50 +170,4 @@
         </div>
     </section>
 
-    <!-- Contacto -->
-    <section class="page-section" id="contact">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Escríbenos</h2>
-                    <hr class="divider my-4" />
-                    <p class="text-muted mb-5">Puedes contactarnos mediante correo electrónico, por nuestro WhatsApp y a traves de nuestra web!</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                    <i class="fab fa-whatsapp fa-3x mb-3 text-muted"></i>
-                    <div>
-                        <a href="tel://+56912345678">+56 9 1234 5678</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mr-auto text-center">
-                    <i class="far fa-envelope fa-3x mb-3 text-muted"></i>
-                    <a class="d-block" href="mailto:contacto@pasteleria.cl">contacto@pasteleria.cl</a>
-                </div>
-                <div class="col-lg-4 mr-auto text-center">
-                    <i class="fab fa-wpforms fa-3x mb-3 text-muted"></i>
-                    <a class="d-block" href="{% url 'contacto' %}"> ¡Haz click aqui para ingresar tu pedido mediante la web!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer-->
-    <footer class="bg-light py-5">
-        <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - DWY4101-002D DuocUC</div>
-        </div>
-    </footer>
-
-    <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <!-- plugins JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <!-- JS -->
-    <script src="{% static 'js/scripts.js' %}"></script>
-</body>
-
-</html>
+{% endblock %}

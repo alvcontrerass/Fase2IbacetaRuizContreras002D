@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-
-<head>
-    {% load static %}
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Prueba 1 Desarrollo Web - Pasteleria" />
-    <meta name="author" content="Sonia, Maribel y Alvaro" />
-    <title>Pasteleria Momentos Dulces</title>
-    <!-- Icono pestaña -->
-    <link rel="icon" type="image/x-icon" href="{% static 'assets/img/cake.ico' %}" />
-    <!-- iconos bloque servicios -->
-    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-    <!-- Fuente de Google -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
-    <!-- Galeria de fotos, fotos grandes -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
-    <!-- CSS -->
-    <link href="{% static 'css/styles1.css' %}" rel="stylesheet" />
-</head>
-
-<body id="page-top">
-    <!-- Menu de navegacion -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top"><i class="fas fa-birthday-cake fa-2x mb-3"> </i> </a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
-                <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'index' %}">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'catalogo' %}">Catálogo</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'contacto' %}">Contacto</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+{% extends "base_generic.html" %}
 
     <!-- Inicio Principal - Carrusel -->
     <header class="masthead">
@@ -51,6 +13,7 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
+                            {% load static %}
                             <img src="{% static 'assets/img/carrusel/1.jpg' %}" alt="">
                                 <div class="carousel-caption">
                                     <h5>Información</h5>
@@ -58,6 +21,7 @@
                                 </div>
                         </div>
                         <div class="carousel-item">
+                            {% load static %}
                             <img src="{% static 'assets/img/carrusel/2.jpg' %}" alt="">
                                 <div class="carousel-caption">
                                     <h5>Indicaciones Covid-19</h5>
@@ -65,6 +29,7 @@
                                 </div>
                         </div>
                         <div class="carousel-item">
+                            {% load static %}
                             <img src="{% static 'assets/img/carrusel/3.jpg' %}" alt="">
                         </div>
                     </div>
@@ -89,7 +54,9 @@
             <div class="col-sm-12 m-auto">    
                 <div class="row no-gutters">
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/1.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/1.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Torta de Chocolate y Café</div>
@@ -99,7 +66,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/2.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/2.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Torta de Mantequilla</div>
@@ -109,7 +78,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/3.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/3.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Torta Chocolate</div>
@@ -119,7 +90,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/4.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/4.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Torta Red Velvet</div>
@@ -129,7 +102,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/5.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/5.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Pastel con Merengue y Frutos Rojos</div>
@@ -139,7 +114,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/6.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/6.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Torta Mexicana de Chocolate</div>
@@ -149,7 +126,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/7.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/7.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Torta de Nuez</div>
@@ -159,7 +138,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/8.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/8.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Torta de Arcoíris</div>
@@ -169,7 +150,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/9.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/9.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Torta de Frutas</div>
@@ -179,7 +162,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/10.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/10.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Torta de Moka Envinado</div>
@@ -189,7 +174,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/11.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/11.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Mousse de Tres Leches</div>
@@ -199,7 +186,9 @@
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6 mt-3">
+                        {% load static %}
                         <a class="catalogo-box" href="{% static 'assets/img/catalogo/fullsize/12.jpeg' %}">
+                            {% load static %}
                             <img class="img-fluid" src="{% static 'assets/img/catalogo/thumbnails/12.jpeg' %}" alt="" />
                             <div class="catalogo-box-caption">
                                 <div class="pasteleria-category text-white-50">Torta Tres Leches</div>
@@ -213,50 +202,4 @@
         </div>
     </div>
     
-    <!-- Contacto -->
-    <section class="page-section" id="contact">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="mt-0">Escríbenos</h2>
-                    <hr class="divider my-4" />
-                    <p class="text-muted mb-5">Puedes contactarnos mediante correo electrónico, por nuestro WhatsApp y a traves de nuestra web!</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                    <i class="fab fa-whatsapp fa-3x mb-3 text-muted"></i>
-                    <div>
-                        <a href="tel://+56912345678">+56 9 1234 5678</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 mr-auto text-center">
-                    <i class="far fa-envelope fa-3x mb-3 text-muted"></i>
-                    <a class="d-block" href="mailto:contacto@pasteleria.cl">contacto@pasteleria.cl</a>
-                </div>
-                <div class="col-lg-4 mr-auto text-center">
-                    <i class="fab fa-wpforms fa-3x mb-3 text-muted"></i>
-                    <a class="d-block" href="{% url 'contacto' %}"> ¡Haz click aquí para ingresar tu pedido mediante la web!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer-->
-    <footer class="bg-light py-5">
-        <div class="container">
-            <div class="small text-center text-muted">Copyright © 2020 - DWY4101-002D DuocUC</div>
-        </div>
-    </footer>
-    
-    <!-- Bootstrap core JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-    <!-- plugins JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <!-- JS -->
-    <script src="{% static  'js/scripts.js' %}"></script>
-</body>
-
-</html>
+{% endblock %}

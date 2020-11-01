@@ -2,7 +2,7 @@ from django.urls import path
 from sitio_web import views
 
 urlpatterns=[
-    path('',views.inicio,name='index'),
+    path('index/',views.index,name='index'),
     path('catalogo/',views.catalogo,name='catalogo'),
     path('contacto/',views.contacto,name='contacto'),
     path('producto/<int:pk>', views.ProductoDetailView.as_view(), name='producto-detail'), # Detalle del producto
