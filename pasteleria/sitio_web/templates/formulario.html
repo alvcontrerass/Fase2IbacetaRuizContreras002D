@@ -18,6 +18,7 @@
     <!-- Galeria de fotos, fotos grandes -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
     <!-- CSS -->
+    {% load static %}
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
     <link href="{% static 'css/valida.css' %}" rel="stylesheet" />
 </head>
@@ -81,27 +82,27 @@
             <form id="formulario" action="/contacto/" method="POST">{% csrf_token %} 
                 <div class="form-group">
                     <label> Nombre </label>
-                    <input class="form-control" name="nombre" type="name" placeholder="Ingrese nombre">
+                    <input class="form-control" required="" name="nombre" type="name" placeholder="Ingrese nombre">
                 </div>
 
                 <div class="form-group">
                     <label> Correo Electrónico</label>
-                    <input class="form-control" name="email" type="email" placeholder="nombre@dominio.cl">
+                    <input class="form-control" required="" name="email" type="email" placeholder="nombre@dominio.cl">
                 </div>
 
                 <div class="form-group">
                     <label>Telefono </label>
-                    <input class="form-control" name="telefono" type="number" minlength="9" placeholder="Ingrese numero celular">
+                    <input class="form-control" required="" name="telefono" type="number" minlength="9" placeholder="Ingrese numero celular">
                 </div>
 
                 <div class="form-group">
                     <label for="date"> Fecha:</label>
-                    <input class="form-control" name="fecha" type="date" placeholder="fecha">
+                    <input class="form-control" required="" name="fecha" type="date" placeholder="fecha">
                 </div>
 
                 <div class="form-group">
                     
-                    <label class="motivo">Motivo de Contacto:</label>
+                    <label class="motivo" required="">Motivo de Contacto:</label>
 
                     <div class="form-check">  
                         
