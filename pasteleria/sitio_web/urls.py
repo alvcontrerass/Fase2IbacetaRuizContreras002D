@@ -5,5 +5,8 @@ urlpatterns=[
     path('',views.inicio,name='index'),
     path('catalogo/',views.catalogo,name='catalogo'),
     path('contacto/',views.contacto,name='contacto'),
-    path('enviar_formulario/', views.enviar_formulario, name='enviar_formulario')
+    path('producto/<int:pk>', views.ProductoDetailView.as_view(), name='producto-detail'), # Detalle del producto
+    path('producto/create/', views.ProductoCreate.as_view(), name='producto_create'), # Crear producto
+    path('producto/<int:pk>/update/', views.ProductoUpdate.as_view(), name='producto_update'), # actualizar
+    path('producto/<int:pk>/delete/', views.ProductoDelete.as_view(), name='producto_delete'),  # eliminar
 ]

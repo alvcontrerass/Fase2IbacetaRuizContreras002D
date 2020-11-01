@@ -1,4 +1,6 @@
 from django.db import models
+from django.urls import reverse
+import uuid
 
 # Create your models here.
 
@@ -8,27 +10,17 @@ class Producto(models.Model):
     nombre_producto=models.CharField(max_length=100)
     descripcion=models.CharField(max_length=1000)
     valor=models.IntegerField()
-    imagen=models.ImageField()
 
-class Pedido_cabecera(models.Model):
+    def get_absolute_url(self):
+	    return reverse('producto-detail', args=[str(self.codigo_producto)])
 
-    numero_pedido=models.AutoField(primary_key=True)
-    fecha_creacion=models.DateField()
-    hora_creacion=models.TimeField()
-    fecha_entrega=models.DateField()
-    hora_entrega=models.TimeField()
-    rut_cliente=models.CharField(max_length=10)
-    nombre_cliente=models.CharField(max_length=100)
-    telefono_cliente=models.IntegerField()
-    email_cliente=models.EmailField()
-    direccion_entrega=models.CharField(max_length=200)
-    valor_total=models.IntegerField()
+class Contacto(models.Model):
 
+    identificador = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=100)
+    email  = models.EmailField()
+    telefono = models.IntegerField()
+    fecha = models.DateField()
+    motivo = models.CharField(max_length=10)
+    comentario = models.CharField(max_length=2000) 
 
-
-class Pedido_posicion(models.Model):
-
-    numero_pedido=models.ForeignKey(Pedido_cabecera, on_delete=models.CASCADE)
-    codigo_producto=models.ForeignKey(Producto,on_delete=models.CASCADE)
-    cantidad=models.IntegerField()
-    valor_posicion=models.IntegerField()

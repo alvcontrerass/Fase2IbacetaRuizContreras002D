@@ -10176,3 +10176,7 @@ header.masthead h1 {
   height: 100%;
   min-height: 300px;
 }
+
+.crud-bg {
+  background-color: #040505;
+}
