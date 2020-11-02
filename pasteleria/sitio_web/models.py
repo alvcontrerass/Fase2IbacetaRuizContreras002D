@@ -6,7 +6,7 @@ import uuid
 
 class Producto(models.Model):
 
-    codigo_producto=models.AutoField(primary_key=True)
+    codigo_producto=models.UUIDField(primary_key=True, default=uuid.uuid4)
     nombre_producto=models.CharField(max_length=100)
     descripcion=models.CharField(max_length=1000)
     valor=models.IntegerField()
@@ -14,13 +14,15 @@ class Producto(models.Model):
     def get_absolute_url(self):
 	    return reverse('producto-detail', args=[str(self.codigo_producto)])
 
+
 class Contacto(models.Model):
 
-    identificador = models.AutoField(primary_key=True)
+    identificador = models.UUIDField(primary_key=True, default=uuid.uuid4)
     nombre = models.CharField(max_length=100)
     email  = models.EmailField()
     telefono = models.IntegerField()
     fecha = models.DateField()
     motivo = models.CharField(max_length=10)
-    comentario = models.CharField(max_length=2000) 
+    comentario = models.CharField(max_length=2000)
+
 
