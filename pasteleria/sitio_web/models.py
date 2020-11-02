@@ -6,7 +6,7 @@ import uuid
 
 class Producto(models.Model):
 
-    codigo_producto=models.UUIDField(primary_key=True, default=uuid.uuid4)
+    codigo_producto=models.AutoField(primary_key=True)
     nombre_producto=models.CharField(max_length=100)
     descripcion=models.CharField(max_length=1000)
     valor=models.IntegerField()
@@ -17,7 +17,7 @@ class Producto(models.Model):
 
 class Contacto(models.Model):
 
-    identificador = models.UUIDField(primary_key=True, default=uuid.uuid4)
+    identificador = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100)
     email  = models.EmailField()
     telefono = models.IntegerField()
